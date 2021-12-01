@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2862948 */
+  src: url('iconfont.woff2?t=1634185826402') format('woff2'),
+       url('iconfont.woff?t=1634185826402') format('woff'),
+       url('iconfont.ttf?t=1634185826402') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-danseshixintubiao-:before {
+  content: "\e632";
+}
+
+.icon-vue:before {
+  content: "\eeb1";
+}
+
+.icon-ts:before {
+  content: "\e6a3";
+}
+
+.icon-lunzi:before {
+  content: "\e64f";
+}
+
+.icon-lunzi2:before {
+  content: "\e644";
+}
+

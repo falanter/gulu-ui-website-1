@@ -1,0 +1,44 @@
+{
+  "id": "2862948",
+  "name": "vue3",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8103425",
+      "name": "箭头",
+      "font_class": "danseshixintubiao-",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "13553545",
+      "name": "vuejs-line",
+      "font_class": "vue",
+      "unicode": "eeb1",
+      "unicode_decimal": 61105
+    },
+    {
+      "icon_id": "13304114",
+      "name": "typescript",
+      "font_class": "ts",
+      "unicode": "e6a3",
+      "unicode_decimal": 59043
+    },
+    {
+      "icon_id": "3074243",
+      "name": "轮子",
+      "font_class": "lunzi",
+      "unicode": "e64f",
+      "unicode_decimal": 58959
+    },
+    {
+      "icon_id": "6060077",
+      "name": "轮子管理",
+      "font_class": "lunzi2",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    }
+  ]
+}
