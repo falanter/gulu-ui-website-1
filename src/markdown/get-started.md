@@ -4,7 +4,8 @@
 然后在你的代码中写入下面的代码
 
 ```
-import {Button, Tabs, Switch, Dialog} from "king-ui"
+import {Button, Tabs, Switch, Dialog} from "falanter-style-test"
+import "falanter-style-test/dist/lib/gulu.css"
 ```
 
 就可以使用我提供的组件了。
