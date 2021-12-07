@@ -1,5 +1,5 @@
 <template>
-    <button class="gulu-switch" @click="toggle" :class="{'gulu-checked':value}" :disabled="disabled"><span></span></button>
+    <button class="gulu-switch" @click="toggle" :class="{'gulu-switch-checked':value}" :disabled="disabled"><span></span></button>
 </template>
 <script lang="ts">
 export default {
@@ -45,7 +45,7 @@ $h2:$h - 4px;
       cursor: not-allowed;
     }
 }
-button.gulu-checked{
+button.gulu-switch-checked{
     background: #1890ff;
     span{
         left:calc(100% - #{$h2} - 2px);

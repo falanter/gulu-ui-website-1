@@ -3,23 +3,22 @@
 </demo>
 
 <template>
-<Radio v-model:value="bool" />
+<Radio v-model:value="radio" label="1">yui</Radio>
+<Radio v-model:value="radio" label="2">poi</Radio>
+<Radio v-model:value="radio" label="3">jkl</Radio>
+<Radio v-model:value="radio" label="4">斯蒂芬</Radio>
 </template>
 
 <script lang="ts">
 import Radio from '../lib/Radio.vue'
-import {
-  ref
-} from 'vue'
 export default {
   components: {
-    Radio,
+    Radio
   },
-  setup() {
-    const bool = ref(false)
-    return {
-      bool
-    }
+  data(){
+      return{
+          radio:'1'
+      }
   }
 }
 </script>

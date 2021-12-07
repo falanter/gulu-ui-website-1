@@ -1,23 +1,18 @@
 <template>
-    <button class="gulu-switch" @click="toggle" :class="{'gulu-checked':value}" :disabled="disabled"><span></span></button>
-    <!-- <div>
-        <span class="gulu-radio" v-for="index" @click="toggle">备选项</span>
-    </div> -->
+    <span class="gulu-radio" @click="toggle" :class="{'gulu-radio-checked':label==value}"><slot/></span>
 </template>
 <script lang="ts">
 export default {
     props:{
-        value:Boolean,
-        disabled: {
-            type: Boolean,
-            default: false,
-        },
+        value:String,
+        label:{
+            type:String,
+            default:'1'
+        }
     },
     setup(props,context){
         const toggle=()=>{
-            // console.log(props,context,ref)
-            // console.log(ref)
-            context.emit('update:value',!props.value)
+            context.emit('update:value',props.label)
         }
         return {toggle}
     }
@@ -26,16 +21,35 @@ export default {
 <style lang="scss">
     $h:14px;
     $blue: #40a9ff;
-    .gulu-radio::before{
-        content: '';
-        display: inline-block;
-        border: 1px solid #ccc;
-        width: $h;
-        height: $h;
-        border-radius: 50%;
+    .gulu-radio {
+        display: inline-flex;
+        align-items: center;
+        /* border: 1px solid red; */
+        margin-left:10px ;
         cursor: pointer;
+        margin-right: 10px;
     }
-    .gulu-radio:hover:before,.gulu-radio:focus:before{
-        border-color:$blue;
+    .gulu-radio::before {
+        content: '';
+        margin-right: 8px;
+        display: block;
+        border: 1px solid #ccc;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+    }
+
+    .gulu-radio:hover:before,
+    .gulu-radio:focus:before {
+        border-color: $blue;
+    }
+    .gulu-radio-checked{
+        color:$blue;
+    }
+    .gulu-radio-checked::before{
+        border: 6px solid $blue;
+        width: 5px;
+        height: 5px;
+        transition:all 100ms;
     }
 </style>

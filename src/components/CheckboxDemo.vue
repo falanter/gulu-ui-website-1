@@ -1,12 +1,12 @@
 <template>
 <div>
-  <h1>Radio 组件示例 </h1>
-  <Demo :component="Radio1" />
+  <h1>Checkbox 组件示例 </h1>
+  <Demo :component="Checkbox1Demo" />
 </div>
 </template>
 
 <script lang="ts">
-import Radio1 from './Radio1.demo.vue'
+import Checkbox1Demo from './Checkbox1.demo.vue'
 
 import Demo from './Demo.vue'
 export default {
@@ -15,7 +15,7 @@ export default {
   },
   setup() {
     return {
-      Radio1
+      Checkbox1Demo
     }
   }
 }
