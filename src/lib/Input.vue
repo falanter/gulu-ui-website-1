@@ -1,5 +1,5 @@
 <template>
-    <input class="gulu-Input" :value=newValue  @change="onChange" />
+    <input class="gulu-Input" @change="onChange" />
 </template>
 <script lang="ts">
 export default {
@@ -7,12 +7,13 @@ export default {
         value:String,
     },
     setup(props,context){
-        const newValue=props.value
+        // const newValue=props.value
+        // console.log(newValue)
         const onChange=(e)=>{
             console.log(e.target.value)
             context.emit('update:value',e.target.value)
         }
-        return {newValue,onChange}
+        return {onChange}
     }
 }
 </script>
