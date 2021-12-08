@@ -8,6 +8,7 @@ import TabsDemo from './components/TabsDemo.vue'
 import DocDemo from './components/DocDemo.vue'
 import RadioDemo from './components/RadioDemo.vue'
 import CheckboxDemo from './components/CheckboxDemo.vue'
+import InputDemo from './components/InputDemo.vue'
 import { h } from 'vue';
 import Markdown from './components/Markdown.vue';
 import intro from './markdown/intro.md';
@@ -29,7 +30,8 @@ export const router=createRouter({
             {path:'dialog',component:DialogDemo},
             {path:'tabs',component:TabsDemo},
             {path:'radio',component:RadioDemo},
-            {path:'checkbox',component:CheckboxDemo}
+            {path:'checkbox',component:CheckboxDemo},
+            {path:'input',component:InputDemo}
         ]}
     ]
 });

@@ -10,15 +10,15 @@
 </template>
 
 <script lang="ts">
-import Radio from '../lib/Radio.vue'
+import {ref} from 'vue';
+import Radio from '../lib/Radio.vue';
 export default {
   components: {
     Radio
   },
-  data(){
-      return{
-          radio:'1'
-      }
+  setup(){
+    const radio=ref('1');
+    return {radio}
   }
 }
 </script>

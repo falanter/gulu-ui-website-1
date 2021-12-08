@@ -4,8 +4,8 @@
   <div class="demo-component">
     <component :is="component" />
   </div>
-  <div class="demo-actions">
-    <Button @click="toggleCode">查看代码</Button>
+  <div class="demo-actions" @click="toggleCode">
+    <div class="showcodeText">显示代码</div>
   </div>
   <div class="demo-code" v-if="codeVisible">
     <pre class="language-html" v-html="html" />
@@ -60,13 +60,53 @@ $border-color: #d9d9d9;
 
   &-component {
     padding: 16px;
+    /* border: 1px solid #ccc; */
   }
 
   &-actions {
     padding: 8px 16px;
     border-top: 1px dashed $border-color;
+    cursor: pointer;
+    height: 50px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    .showcodeText{
+      margin-top: 4px;
+      color:#ccc;
+      transform:translateX(100px);
+      transition: all 300ms;
+      opacity: 0;
+    }
+    &:hover:after{
+      border-color:transparent transparent #40a9ff;
+    }
+    &:hover{
+      .showcodeText{
+        color:#40a9ff;
+      }
+    }
   }
-
+  &:hover{
+    .demo-actions::after{
+      transform:rotate(180deg) translateX(35px);
+    }
+    .showcodeText{
+      transform:translateX(50px);
+      opacity: 1;
+    }
+  }
+  &-actions::after{
+    content: '';
+    display: block;
+    width:0;
+    height:0;
+    border:5px solid;
+    border-color:transparent transparent #ccc;
+    transform: rotate(180deg);
+    margin-top:13px;
+    transition: all 250ms;
+  }
   &-code {
     padding: 8px 16px;
     border-top: 1px dashed $border-color;
@@ -75,6 +115,7 @@ $border-color: #d9d9d9;
       line-height: 1.1;
       font-family: Consolas, 'Courier New', Courier, monospace;
       margin: 0;
+      /* border: 1px solid #ccc; */
     }
   }
 }
